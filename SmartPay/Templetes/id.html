@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+</head>
+<body>
+	
+    <script>
+        var source = new EventSource("{% url 'stream_data' %}");
+        source.onmessage = function(event) {
+            // handle the incoming message
+            //var data = event.data;
+            console.log(5);
+            update_page(data);
+        };
+    </script>
+    
+</body>
+</html>
